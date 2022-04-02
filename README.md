@@ -1,5 +1,5 @@
 # VideoPoker
-This is the code from an assignment that created a Video Poker Game
+This is the code that creates a Video Poker Game, based on user input 
 
 ## Text File w/ Code Explanations: 
 
