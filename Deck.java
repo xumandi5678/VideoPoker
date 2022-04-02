@@ -1,0 +1,54 @@
+// Mandi Xu
+// mx2244
+// Deck.java
+// This is the Deck class that creates the deck of cards 
+
+import java.util.Random;
+public class Deck {
+	
+	private Card[] cards;
+	private int top; // the index of the top of the deck
+    
+	// add more instance variables if needed
+	private Random rand = new Random();
+    
+    
+	public Deck(){
+		// make a 52 card deck here
+        cards = new Card[52];
+        int index = 0;
+        for(int i = 1; i<=4; i++) {
+            for(int j = 1; j<=13; j++) {
+                Card c = new Card(i,j);
+                cards[index] = c;
+                index += 1;
+            }
+            
+        }
+        top = 0;
+	}
+	
+	public void shuffle(){
+		// shuffle the deck here
+        for(int i = 0; i<cards.length; i++) { 
+            int x = rand.nextInt(cards.length);
+            Card tempCard = cards[i];
+            Card switchCard = cards[x];
+            cards[i] = switchCard;
+            cards[x] = tempCard;
+        }
+	}
+
+	public Card deal(){
+		// deal the top card in the deck
+        if(top < 52) {
+            top += 1;
+        } else { // reshuffles if end reached
+            shuffle();
+            deal();
+        }
+        return cards[top-1];
+    }
+	
+	// add more methods here if needed
+}
