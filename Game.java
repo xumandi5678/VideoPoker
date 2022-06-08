@@ -12,13 +12,13 @@ public class Game {
 	private Player p;
 	private Deck cards;
 	// you'll probably need some more here
-    private Scanner input;
-    private int earnings;
-    private int removed;
+	private Scanner input;
+    	private int earnings;
+    	private int removed;
 	private String type;
-    private boolean y;
-    private boolean playAgain;
-    private boolean given;
+    	private boolean y;
+    	private boolean playAgain;
+    	private boolean given;
 	
 	public Game(String[] testHand){
 		// This constructor is to help test your code.
